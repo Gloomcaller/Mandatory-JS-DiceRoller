@@ -1,19 +1,72 @@
-#container {
+body {
+    margin: 0;
+    padding: 0;
+    background: url('media/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+#container {
+    width: 90%;
+    max-width: 800px;
+    background-color: gray;
+    padding: 20px;
+    margin: 20px auto;
+    border: 3px solid black;
+    border-radius: 10px;
     text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+label,
+input,
+button,
+#diceResult {
+    display: block;
+    margin: 10px auto;
+}
+
+input {
     font-size: large;
+    width: 150px;
+    text-align: center;
     font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 button {
     font-size: large;
     padding: 10px 15px;
     border-radius: 10px;
-    border: none;
+    border: 2px solid black;
     background-color: orange;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover {
@@ -24,18 +77,50 @@ button:active {
     background-color: brown;
 }
 
-input {
-    font-size: large;
-    width: 150px;
-    text-align: center;
+#diceResult {
+    margin: 20px;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
-#diceResoult {
-    margin: 25px;
+#diceImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 #diceImages img {
-    width: 150px;
+    width: 100px;
     margin: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#diceImages::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+#diceImages::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+#diceImages::-webkit-scrollbar-thumb:hover {
+    background-color: black;
+}
+
+#diceImages::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    #diceImages img {
+        width: 80px;
+    }
 }
