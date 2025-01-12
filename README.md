@@ -13,7 +13,7 @@ An interactive dice roller app created using HTML, CSS, and JavaScript. Roll up 
 
 1. Clone the repository to your local machine:
 
-   git clone [<repository-url>](https://github.com/Gloomcaller/Mandatory-JS-DiceRoller.git)
+   git clone `https://github.com/Gloomcaller/Mandatory-JS-DiceRoller.git`
 
 2. Open the `index.html` file in a web browser.
 
