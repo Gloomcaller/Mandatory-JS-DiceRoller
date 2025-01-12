@@ -15,8 +15,10 @@
             <h1>Dice Roller</h1>
         </header>
         <label for="numOfDice">Number of Dice:</label>
-        <input type="number" id="numOfDice" value="1" min="1" max="36">
-        <button onclick="rollDice()">Roll Dice</button>
+        <input type="number" id="numOfDice" title="Enter the number of dice to roll" placeholder="Enter 1-36" value="1"
+            min="1" max="36">
+        <button onclick="rollDice()" title="Roll the dice">Roll Dice</button>
+        <button onclick="clearDice()" title="Clear the dice">Clear Dice</button>
         <div id="diceResult"></div>
         <div id="diceImages"></div>
     </div>

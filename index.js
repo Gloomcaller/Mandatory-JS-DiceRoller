@@ -19,10 +19,19 @@ function rollDice() {
 
     document.getElementById("numOfDice").addEventListener("blur", function () {
         if (this.value > 36) {
+            alert("The maximum number of dice is 36.");
             this.value = 36;
         }
         if (this.value < 1) {
+            alert("The minimum number of dice is 1.");
             this.value = 1;
         }
     });
+
+}
+
+function clearDice() {
+    document.getElementById("diceResult").textContent = "";
+    document.getElementById("diceImages").innerHTML = "";
+    document.getElementById("numOfDice").value = 6;
 }
